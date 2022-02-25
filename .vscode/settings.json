@@ -1,0 +1,50 @@
+{
+  "editor.tabSize": 2,
+
+  "vetur.format.enable": false,
+  "vetur.validation.template": false,
+  "javascript.format.enable": false,
+  "vetur.validation.script": false,
+  "css.hover.references": false,
+
+  // save
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+
+  // prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // stylelint
+  "stylelint.validate": ["css", "scss"],
+  "css.validate": false,
+  "scss.validate": false,
+  "html.format.enable": false,
+  "[scss]": {
+    // "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // eslint
+  "eslint.validate": ["javascript", "vue"],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "vetur.languageFeatures.updateImportOnFileMove": false,
+  "vetur.validation.style": false,
+  "vetur.completion.autoImport": false,
+
+  "path-intellisense.mappings": {
+		"@/": "${workspaceFolder}/app/",
+		"~/": "${workspaceFolder}/app/",
+		"/images/": "${workspaceFolder}/app/static/images/",
+  },
+}
