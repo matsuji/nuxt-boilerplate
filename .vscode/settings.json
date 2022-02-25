@@ -43,8 +43,8 @@
   "vetur.completion.autoImport": false,
 
   "path-intellisense.mappings": {
-		"@/": "${workspaceFolder}/app/",
-		"~/": "${workspaceFolder}/app/",
-		"/images/": "${workspaceFolder}/app/static/images/",
+		"@/": "${workspaceFolder}/src/",
+		"~/": "${workspaceFolder}/src/",
+		"/images/": "${workspaceFolder}/src/static/images/",
   },
 }
