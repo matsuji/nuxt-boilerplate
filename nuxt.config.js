@@ -1,3 +1,5 @@
+const globImporter = require('node-sass-glob-importer')
+
 export default {
   srcDir: 'src/',
 
@@ -19,6 +21,13 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [{ src: '@/assets/scss/style.scss', lang: 'scss' }],
 
+  styleResources: {
+    scss: [
+      '@/assets/scss/partials/base/_variables.scss',
+      '@/assets/scss/partials/base/_mixins.scss'
+    ]
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -29,8 +38,14 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    extend(config, { loaders: { scss } }) {
+      const sassOptions = scss.sassOptions || {}
+      sassOptions.importer = globImporter()
+      scss.sassOptions = sassOptions
+    }
+  }
 }
