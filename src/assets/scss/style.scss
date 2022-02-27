@@ -1,4 +1,7 @@
 @import './partials/base/variables';
+@import './partials/base/mixins';
+@import './partials/base/fonts';
+@import './partials/base/reset';
 
 body {
   background-color: $base;

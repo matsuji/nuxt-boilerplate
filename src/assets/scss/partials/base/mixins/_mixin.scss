@@ -1,2 +1,6 @@
-@mixin mixin {
+@mixin icon($name) {
+  font-family: 'Icon Font';
+  font-style: normal;
+  font-weight: normal;
+  content: map-get($icons, $name);
 }
